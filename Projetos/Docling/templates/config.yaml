@@ -1,0 +1,30 @@
+# Configuracao do Docling para Hermes Agent
+# Coloque este arquivo em ~/.hermes/skills/docling/config.yaml
+
+# Caminho do ambiente virtual
+venv_path: ~/.hermes/skills/docling/.venv
+
+# Opcoes padrao de conversao
+default_options:
+  format: markdown  # markdown, json, html
+  ocr_mode: auto   # auto, force_all, disabled
+  
+# Diretorios de trabalho
+paths:
+  input: ~/Documents/Input
+  output: ~/Documents/Output
+  temp: /tmp/docling
+
+# Opcoes avancadas
+advanced:
+  # Usar GPU se disponivel (requer docling[gpu])
+  use_gpu: false
+  
+  # Numero maximo de paginas (0 = todas)
+  max_pages: 0
+  
+  # Extrair tabelas
+  extract_tables: true
+  
+  # Extrair imagens
+  extract_images: false
