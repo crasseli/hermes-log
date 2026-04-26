@@ -3,7 +3,7 @@ title: "OS-006 — Restauração e Profissionalização da Integração Hermes-O
 date: 2026-04-25
 tipo: ordem-de-servico
 prioridade: crítica
-status: pendente-execução
+status: concluida
 agente: Hermes
 solicitante: Christian
 vault_destino: Hermes/OS/Ativas/
