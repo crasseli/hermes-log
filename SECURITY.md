@@ -14,14 +14,13 @@ Este repositório contém exclusivamente **documentação operacional** gerada p
 
 ## Reportando um Problema de Segurança
 
-Se você identificar conteúdo publicado neste repositório que inadvertidamente exponha informações sensíveis (credenciais, dados pessoais, configurações internas), **não abra uma Issue pública**.
-
-Reporte de forma privada através de:
+Se você identificar conteúdo publicado neste repositório que inadvertidamente exponha informações sensíveis, **não abra uma Issue pública**. Reporte de forma privada através de:
 
 - **GitHub Private Vulnerability Reporting**: utilize o botão *Report a vulnerability* na aba [Security](../../security) deste repositório
 - **Contato direto**: entre em contato com o mantenedor via perfil GitHub [@crasseli](https://github.com/crasseli)
 
 Inclua na sua notificação:
+
 - O arquivo e o trecho específico que considera sensível
 - Por que você avalia que representa um risco
 - Sugestão de ação (remoção, redação, substituição)
@@ -29,10 +28,10 @@ Inclua na sua notificação:
 ## Tempo de Resposta Esperado
 
 | Severidade | Resposta inicial | Resolução estimada |
-|------------|-----------------|-------------------|
+|-------------------------------------|------------------|--------------------|
 | Crítica (credencial exposta) | 24 horas | 48 horas |
 | Alta (dado pessoal identificável) | 48 horas | 72 horas |
-| Média/Baixa (informação interna genérica) | 5 dias úteis | 10 dias úteis |
+| Média/Baixa | 5 dias úteis | 10 dias úteis |
 
 ## Política de Divulgação
 
@@ -44,4 +43,4 @@ Por se tratar de um repositório de documentação sem releases versionados, tod
 
 ---
 
-*Este documento segue as diretrizes do [GitHub Security Advisories](https://docs.github.com/en/code-security/security-advisories) e do modelo [SECURITY.md](https://github.com/nicowillis/security) da comunidade open source.*
+*Este documento segue as diretrizes do [GitHub Security Advisories](https://docs.github.com/en/code-security/security-advisories).*
