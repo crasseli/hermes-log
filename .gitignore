@@ -1,0 +1,9 @@
+# Nao versionar codigo ou secrets
+*.py
+*.env
+*.key
+*.pem
+*.db
+*.sqlite
+__pycache__/
+.env
