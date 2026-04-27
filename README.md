@@ -1,6 +1,6 @@
 # Hermes-Log
 
-Diario de bordo do desenvolvimento e evolucao do Hermes Agent na FAMEESP.
+Diario de bordo do desenvolvimento e evolucao do Hermes Agent By Christian Rasseli.
 
 Este repositorio NAO contem codigo-fonte do Hermes. Registra apenas a trajetoria operacional: decisoes tecnicas, diagnosticos, configuracoes, sessoes relevantes e metricas de evolucao.
 
