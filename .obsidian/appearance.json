@@ -1,4 +1,5 @@
 {
   "theme": "obsidian",
-  "cssTheme": "Wasp"
+  "cssTheme": "Wasp",
+  "interfaceFontFamily": "Gadugi"
 }
