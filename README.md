@@ -9,7 +9,7 @@ Diário de bordo do desenvolvimento e evolução do **Hermes Agent** — por Chr
 
 Este repositório **não contém código-fonte** do Hermes. Registra apenas a trajetória operacional: decisões técnicas, diagnósticos, configurações, sessões relevantes e métricas de evolução.
 
-O Hermes Agent é um assistente de IA especializado em suporte TI N2 e pesquisa de segurança da informação, desenvolvido para a FAMEESP.
+O Hermes Agent é um assistente de IA especializado em suporte TI N2 e pesquisa de segurança da informação, desenvolvido pela empresa Nous Research e personalizado por Christian Rasseli.
 
 ## Estrutura
 
