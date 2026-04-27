@@ -1,14 +1,20 @@
 ---
 name: Relatório de Bug
-about: Reporte um problema encontrado
+about: Comportamento inesperado do agente ou falha operacional
 title: '[BUG] '
 labels: bug
 assignees: ''
 ---
 
-## Descrição do Bug
+## Descrição
 
-Descreva claramente o problema encontrado.
+Descreva o comportamento inesperado de forma direta e objetiva.
+
+## Contexto / Sessão
+
+- Modelo utilizado:
+- Skill ou ferramenta envolvida:
+- Sessão relacionada (se houver):
 
 ## Passos para Reproduzir
 
@@ -22,8 +28,14 @@ O que deveria acontecer?
 
 ## Comportamento Observado
 
-O que aconteceu na prática?
+O que aconteceu na prática? Inclua mensagens de erro, traceback ou saída relevante.
 
-## Contexto Adicional
+## Logs ou Métricas
 
-Capturas de tela, logs ou qualquer informação relevante.
+Cole aqui logs do terminal, saída do agente ou métricas relevantes. Se for longo, use blocos de código.
+
+## Ambiente
+
+- OS: (ex: WSL Ubuntu 24.04 / Windows 11)
+- Versão do Hermes:
+- Outro contexto relevante:
