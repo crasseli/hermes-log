@@ -1,25 +1,55 @@
 # Hermes-Log
 
-Diario de bordo do desenvolvimento e evolucao do Hermes Agent By Christian Rasseli.
+[![Licença: MIT](https://img.shields.io/badge/licen%C3%A7a-MIT-blue.svg)](LICENSE)
+[![Código de Conduta](https://img.shields.io/badge/conduta-Contributor%20Covenant%20v2.1-purple.svg)](CODE_OF_CONDUCT.md)
 
-Este repositorio NAO contem codigo-fonte do Hermes. Registra apenas a trajetoria operacional: decisoes tecnicas, diagnosticos, configuracoes, sessoes relevantes e metricas de evolucao.
+Diário de bordo do desenvolvimento e evolução do **Hermes Agent** — por Christian Rasseli.
+
+## Sobre
+
+Este repositório **não contém código-fonte** do Hermes. Registra apenas a trajetória operacional: decisões técnicas, diagnósticos, configurações, sessões relevantes e métricas de evolução.
+
+O Hermes Agent é um assistente de IA especializado em suporte TI N2 e pesquisa de segurança da informação, desenvolvido para a FAMEESP.
 
 ## Estrutura
 
-| Diretorio | Conteudo |
+| Diretório | Conteúdo |
 |-----------|----------|
-| `diario/` | Entradas cronologicas do diario de bordo (YYYY-MM-DD.md) |
-| `relatorios/` | Relatorios de OS e diagnosticos finalizados |
-| `sessoes/` | Resumos de sessoes com decisao ou descoberta documentada |
-| `metricas/` | Metricas de uso, custos, performance e evolucao |
+| `diario/` | Entradas cronológicas do diário de bordo (`YYYY-MM-DD.md`) |
+| `relatorios/` | Relatórios de OS e diagnósticos finalizados |
+| `sessoes/` | Resumos de sessões com decisão ou descoberta documentada |
+| `metricas/` | Métricas de uso, custos, performance e evolução |
 
-## Convencao
+## Como usar
 
-- Commits em portugues
-- Uma entrada por dia no diario
-- Sessoes e relatorios nomeados como `Titulo_Descritivo_YYYY-MM-DD.md`
-- Sem acentos nos nomes de arquivo, underscore no lugar de espacos
+- Navegue pelo `diario/` para acompanhar a evolução dia a dia
+- Consulte `relatorios/` para diagnósticos e ordens de serviço finalizadas
+- Veja `metricas/` para dados de performance e custos operacionais
+- Leia `sessoes/` para decisões técnicas e descobertas documentadas
 
-## Origem
+## Convenção
 
-Gerado automaticamente pelo Hermes Agent (cron job) como parte da rotina de documentacao autonomica.
+- Commits em português
+- Uma entrada por dia no diário
+- Sessões e relatórios nomeados como `Titulo_Descritivo_YYYY-MM-DD.md`
+- Sem acentos nos nomes de arquivo, underscore no lugar de espaços
+
+## Contribuindo
+
+Consulte o arquivo [CONTRIBUTING.md](CONTRIBUTING.md) para orientações sobre como reportar problemas, sugerir melhorias e enviar pull requests.
+
+## Código de Conduta
+
+Este projeto segue o [Código de Conduta](CODE_OF_CONDUCT.md) baseado no Contributor Covenant v2.1. Ao participar, você concorda em seguir suas regras.
+
+## Segurança
+
+Consulte [SECURITY.md](SECURITY.md) para informações sobre como reportar vulnerabilidades.
+
+## Licença
+
+Este projeto está licenciado sob a [Licença MIT](LICENSE).
+
+---
+
+Gerado automaticamente pelo Hermes Agent como parte da rotina de documentação autonômica.
