@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 320" font-family="'Segoe UI', system-ui, -apple-system, sans-serif">
+  <defs>
+    <linearGradient id="greenGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#059669"/>
+      <stop offset="100%" stop-color="#34d399"/>
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="115%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <rect width="600" height="320" fill="#f8fafc" rx="12"/>
+
+  <!-- Card central -->
+  <rect x="50" y="30" width="500" height="260" fill="white" rx="16" filter="url(#shadow)"/>
+
+  <!-- Barra superior verde -->
+  <rect x="50" y="30" width="500" height="60" fill="url(#greenGrad)" rx="16"/>
+  <rect x="50" y="70" width="500" height="20" fill="url(#greenGrad)"/>
+
+  <text x="300" y="62" text-anchor="middle" font-size="22" font-weight="700" fill="white">VEREDITO FINAL</text>
+  <text x="300" y="80" text-anchor="middle" font-size="11" fill="#d1fae5">Análise S01E05 — Hermes-Desktop vs Setup CLI + WSL2</text>
+
+  <!-- Score -->
+  <text x="300" y="125" text-anchor="middle" font-size="48" font-weight="800" fill="#059669">6 x 1</text>
+  <text x="300" y="150" text-anchor="middle" font-size="13" fill="#475569">CLI + WSL2 vence em 6 dos 7 critérios avaliados</text>
+
+  <!-- Unica vitoria Desktop -->
+  <rect x="100" y="170" width="400" height="36" fill="#fef2f2" rx="8" stroke="#fca5a5" stroke-width="1"/>
+  <text x="300" y="185" text-anchor="middle" font-size="10" fill="#991b1b">Única vantagem do Desktop: Interface / UX (90% vs 55%)</text>
+  <text x="300" y="199" text-anchor="middle" font-size="9" fill="#991b1b">GUI é conveniência — não substitui arquitetura</text>
+
+  <!-- Vitorias CLI -->
+  <rect x="100" y="218" width="400" height="36" fill="#ecfdf5" rx="8" stroke="#6ee7b7" stroke-width="1"/>
+  <text x="300" y="233" text-anchor="middle" font-size="10" font-weight="600" fill="#065f46">CLI vence em: Persistência, Memória, Inter-Agente, Skills, Segurança, Mensageria</text>
+  <text x="300" y="247" text-anchor="middle" font-size="9" fill="#065f46">Diferença de categoria — não de grau</text>
+
+  <!-- Recomendacao -->
+  <rect x="120" y="268" width="360" height="14" fill="#059669" rx="4"/>
+  <text x="300" y="279" text-anchor="middle" font-size="9" font-weight="700" fill="white">RECOMENDAÇÃO: Manter setup atual. Monitorar como inspiração. Não migrar.</text>
+</svg>
