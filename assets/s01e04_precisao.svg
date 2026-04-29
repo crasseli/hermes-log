@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" font-family="'Segoe UI', system-ui, -apple-system, sans-serif">
+  <defs>
+    <linearGradient id="greenBar" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#34d399"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <linearGradient id="orangeBar" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb923c"/>
+      <stop offset="100%" stop-color="#ea580c"/>
+    </linearGradient>
+    <linearGradient id="redBar" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f87171"/>
+      <stop offset="100%" stop-color="#dc2626"/>
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="115%" height="115%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- Fundo -->
+  <rect width="600" height="420" fill="#f8fafc" rx="12"/>
+
+  <!-- Titulo -->
+  <text x="300" y="38" text-anchor="middle" font-size="20" font-weight="700" fill="#1e293b">Precisao de Transcricao</text>
+  <text x="300" y="58" text-anchor="middle" font-size="12" fill="#64748b">Porcentagem de palavras transcritas corretamente</text>
+
+  <!-- Grid area: x=90..540, y=80..340 -->
+  <!-- Gridlines -->
+  <line x1="90" y1="340" x2="540" y2="340" stroke="#cbd5e1" stroke-width="1"/>
+  <line x1="90" y1="288" x2="540" y2="288" stroke="#e2e8f0" stroke-width="0.7" stroke-dasharray="4,4"/>
+  <line x1="90" y1="236" x2="540" y2="236" stroke="#e2e8f0" stroke-width="0.7" stroke-dasharray="4,4"/>
+  <line x1="90" y1="184" x2="540" y2="184" stroke="#e2e8f0" stroke-width="0.7" stroke-dasharray="4,4"/>
+  <line x1="90" y1="132" x2="540" y2="132" stroke="#e2e8f0" stroke-width="0.7" stroke-dasharray="4,4"/>
+  <line x1="90" y1="80" x2="540" y2="80" stroke="#e2e8f0" stroke-width="0.7" stroke-dasharray="4,4"/>
+
+  <!-- Y-axis labels -->
+  <text x="80" y="344" text-anchor="end" font-size="11" fill="#94a3b8">0%</text>
+  <text x="80" y="292" text-anchor="end" font-size="11" fill="#94a3b8">20%</text>
+  <text x="80" y="240" text-anchor="end" font-size="11" fill="#94a3b8">40%</text>
+  <text x="80" y="188" text-anchor="end" font-size="11" fill="#94a3b8">60%</text>
+  <text x="80" y="136" text-anchor="end" font-size="11" fill="#94a3b8">80%</text>
+  <text x="80" y="84" text-anchor="end" font-size="11" fill="#94a3b8">100%</text>
+
+  <!-- Barra Whisper: 95% -> height = 260*0.95 = 247, y = 340-247 = 93 -->
+  <rect x="155" y="93" width="100" height="247" fill="url(#greenBar)" rx="6" filter="url(#shadow)"/>
+  <text x="205" y="83" text-anchor="middle" font-size="18" font-weight="700" fill="#059669">95%+</text>
+  <text x="205" y="362" text-anchor="middle" font-size="13" font-weight="600" fill="#1e293b">Whisper</text>
+  <text x="205" y="377" text-anchor="middle" font-size="10" fill="#64748b">STT Dedicado</text>
+
+  <!-- Barra Omni OFF: 60% -> height = 260*0.60 = 156, y = 340-156 = 184 -->
+  <rect x="280" y="184" width="100" height="156" fill="url(#orangeBar)" rx="6" filter="url(#shadow)"/>
+  <text x="330" y="174" text-anchor="middle" font-size="18" font-weight="700" fill="#ea580c">~60%</text>
+  <text x="330" y="362" text-anchor="middle" font-size="13" font-weight="600" fill="#1e293b">Omni</text>
+  <text x="330" y="377" text-anchor="middle" font-size="10" fill="#64748b">thinking=OFF</text>
+
+  <!-- Barra Omni ON: 40% -> height = 260*0.40 = 104, y = 340-104 = 236 -->
+  <rect x="405" y="236" width="100" height="104" fill="url(#redBar)" rx="6" filter="url(#shadow)"/>
+  <text x="455" y="226" text-anchor="middle" font-size="18" font-weight="700" fill="#dc2626">~40%</text>
+  <text x="455" y="362" text-anchor="middle" font-size="13" font-weight="600" fill="#1e293b">Omni</text>
+  <text x="455" y="377" text-anchor="middle" font-size="10" fill="#64748b">thinking=ON</text>
+
+  <!-- Anotacao da diferenca -->
+  <line x1="255" y1="93" x2="405" y2="93" stroke="#64748b" stroke-width="1" stroke-dasharray="3,3"/>
+  <text x="330" y="86" text-anchor="middle" font-size="10" fill="#64748b" font-style="italic">2.4x mais preciso</text>
+
+  <!-- Legenda -->
+  <rect x="170" y="398" width="12" height="12" fill="url(#greenBar)" rx="2"/>
+  <text x="187" y="409" font-size="10" fill="#475569">STT Dedicado</text>
+  <rect x="270" y="398" width="12" height="12" fill="url(#orangeBar)" rx="2"/>
+  <text x="287" y="409" font-size="10" fill="#475569">Multimodal (OFF)</text>
+  <rect x="395" y="398" width="12" height="12" fill="url(#redBar)" rx="2"/>
+  <text x="412" y="409" font-size="10" fill="#475569">Multimodal (ON)</text>
+</svg>

@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" font-family="'Segoe UI', system-ui, -apple-system, sans-serif">
+  <defs>
+    <linearGradient id="greenBar" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#059669"/>
+      <stop offset="100%" stop-color="#34d399"/>
+    </linearGradient>
+    <linearGradient id="redBar" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#dc2626"/>
+      <stop offset="100%" stop-color="#f87171"/>
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="115%" height="115%">
+      <feDropShadow dx="2" dy="1" stdDeviation="3" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <!-- Fundo -->
+  <rect width="600" height="420" fill="#f8fafc" rx="12"/>
+
+  <!-- Titulo -->
+  <text x="300" y="38" text-anchor="middle" font-size="20" font-weight="700" fill="#1e293b">Velocidade de Processamento</text>
+  <text x="300" y="58" text-anchor="middle" font-size="12" fill="#64748b">Tempo de resposta para transcricao de ~34s de audio</text>
+
+  <!-- Grid area: y=100..300, x=130..540 -->
+  <!-- Gridlines verticais -->
+  <line x1="130" y1="100" x2="130" y2="300" stroke="#cbd5e1" stroke-width="1"/>
+  <line x1="232" y1="100" x2="232" y2="300" stroke="#e2e8f0" stroke-width="0.7" stroke-dasharray="4,4"/>
+  <line x1="335" y1="100" x2="335" y2="300" stroke="#e2e8f0" stroke-width="0.7" stroke-dasharray="4,4"/>
+  <line x1="437" y1="100" x2="437" y2="300" stroke="#e2e8f0" stroke-width="0.7" stroke-dasharray="4,4"/>
+  <line x1="540" y1="100" x2="540" y2="300" stroke="#e2e8f0" stroke-width="0.7" stroke-dasharray="4,4"/>
+
+  <!-- X-axis labels (0s a 4s) -->
+  <text x="130" y="320" text-anchor="middle" font-size="11" fill="#94a3b8">0s</text>
+  <text x="232" y="320" text-anchor="middle" font-size="11" fill="#94a3b8">1s</text>
+  <text x="335" y="320" text-anchor="middle" font-size="11" fill="#94a3b8">2s</text>
+  <text x="437" y="320" text-anchor="middle" font-size="11" fill="#94a3b8">3s</text>
+  <text x="540" y="320" text-anchor="middle" font-size="11" fill="#94a3b8">4s</text>
+
+  <!-- Barra Whisper: ~1s -> width = 102 -->
+  <rect x="130" y="135" width="102" height="70" fill="url(#greenBar)" rx="6" filter="url(#shadow)"/>
+  <text x="242" y="176" font-size="20" font-weight="700" fill="#059669">~1s</text>
+  <text x="90" y="168" text-anchor="end" font-size="14" font-weight="600" fill="#1e293b">Whisper</text>
+  <text x="90" y="184" text-anchor="end" font-size="10" fill="#64748b">STT Dedicado</text>
+
+  <!-- Barra Multimodal: ~3s -> width = 306 -->
+  <rect x="130" y="230" width="306" height="70" fill="url(#redBar)" rx="6" filter="url(#shadow)"/>
+  <text x="446" y="271" font-size="20" font-weight="700" fill="#dc2626">~3s</text>
+  <text x="90" y="263" text-anchor="end" font-size="14" font-weight="600" fill="#1e293b">Omni</text>
+  <text x="90" y="279" text-anchor="end" font-size="10" fill="#64748b">Multimodal</text>
+
+  <!-- Destaque 3x mais rapido -->
+  <rect x="380" y="120" width="150" height="52" fill="#ecfdf5" rx="8" stroke="#059669" stroke-width="1.5"/>
+  <text x="455" y="143" text-anchor="middle" font-size="16" font-weight="700" fill="#059669">3x mais rapido</text>
+  <text x="455" y="161" text-anchor="middle" font-size="10" fill="#059669">Whisper vs Multimodal</text>
+
+  <!-- Seta indicando diferenca -->
+  <path d="M 232 175 Q 260 175 280 195 L 280 230 Q 280 240 290 240" stroke="#059669" stroke-width="1.5" fill="none" stroke-dasharray="4,3"/>
+  <polygon points="287,240 280,234 280,246" fill="#059669"/>
+
+  <!-- Legenda -->
+  <rect x="170" y="348" width="12" height="12" fill="url(#greenBar)" rx="2"/>
+  <text x="187" y="359" font-size="10" fill="#475569">Whisper (STT Dedicado)</text>
+  <rect x="320" y="348" width="12" height="12" fill="url(#redBar)" rx="2"/>
+  <text x="337" y="359" font-size="10" fill="#475569">Nemotron 3 Nano Omni (Multimodal)</text>
+
+  <!-- Nota de rodape -->
+  <text x="300" y="395" text-anchor="middle" font-size="9" fill="#94a3b8">Tempo medido para transcricao de audio de ~34s em PT-BR com termos tecnicos</text>
+</svg>
