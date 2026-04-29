@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 220" font-family="'Segoe UI', Arial, sans-serif">
+  <rect width="800" height="220" fill="#ffffff" rx="8"/>
+  
+  <text x="400" y="28" text-anchor="middle" font-size="16" font-weight="bold" fill="#2c3e50">Processamento Literal vs Semântico</text>
+  
+  <!-- Literal (Whisper) -->
+  <rect x="60" y="55" width="320" height="120" fill="#eafaf1" rx="8" stroke="#2ECC71" stroke-width="2"/>
+  <text x="220" y="80" text-anchor="middle" font-size="14" font-weight="bold" fill="#27AE60">LITERAL (Whisper)</text>
+  
+  <text x="220" y="105" text-anchor="middle" font-size="11" fill="#2c3e50">Ouve → Escreve exatamente o que ouviu</text>
+  <text x="220" y="125" text-anchor="middle" font-size="11" fill="#2c3e50">Preserva acrônimos e termos técnicos</text>
+  <text x="220" y="145" text-anchor="middle" font-size="11" fill="#2c3e50">Sem interpretação, sem parafraseamento</text>
+  <text x="220" y="165" text-anchor="middle" font-size="10" font-weight="600" fill="#27AE60">Ideal: STT, atas, legendas, logs verbais</text>
+  
+  <!-- Seta -->
+  <text x="400" y="120" text-anchor="middle" font-size="20" fill="#7f8c8d">⟷</text>
+  
+  <!-- Semantico (Omni) -->
+  <rect x="420" y="55" width="320" height="120" fill="#fdedec" rx="8" stroke="#E74C3C" stroke-width="2"/>
+  <text x="580" y="80" text-anchor="middle" font-size="14" font-weight="bold" fill="#C0392B">SEMÂNTICO (Multimodal)</text>
+  
+  <text x="580" y="105" text-anchor="middle" font-size="11" fill="#2c3e50">Ouve → Compreende → Reescreve</text>
+  <text x="580" y="125" text-anchor="middle" font-size="11" fill="#2c3e50">Interpreta acrônimos e contexto</text>
+  <text x="580" y="145" text-anchor="middle" font-size="11" fill="#2c3e50">Parafraseamento e alucinações possíveis</text>
+  <text x="580" y="165" text-anchor="middle" font-size="10" font-weight="600" fill="#C0392B">Ideal: resumo, intenção, análise de reunião</text>
+  
+  <!-- Rodape -->
+  <text x="400" y="205" text-anchor="middle" font-size="11" fill="#7f8c8d">Arquitetura híbrida: Whisper para transcrição + Multimodal para compreensão contextual</text>
+</svg>

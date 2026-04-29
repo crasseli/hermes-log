@@ -35,6 +35,7 @@ O Hermes Agent é um assistente de IA especializado em suporte TI N2 e pesquisa 
 | S01E01 | Lições Aprendidas na Implementação | Erros comuns, validação de entrada, memória persistente |
 | S01E02 | Testes de Visão Dedicada | Experimento com modelo multimodal NVIDIA NIM, comparação especializado vs genérico |
 | S01E03 | Incidente YAML — Recuperação Inter-Agente | Diagnóstico remoto, correção de config, métricas de resolução |
+| S01E04 | Testes de Transcrição de Áudio | Whisper vs modelo multimodal, thinking mode e áudio, literal vs semântico |
 | Tutorial | Manutenção de config.yaml | Guia genérico de validação, correção e prevenção de erros YAML |
 
 ## Convenção
