@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 280" font-family="'Segoe UI', Arial, sans-serif">
+  <!-- Fundo branco -->
+  <rect width="800" height="280" fill="#ffffff" rx="8"/>
+  
+  <!-- Titulo -->
+  <text x="400" y="30" text-anchor="middle" font-size="16" font-weight="bold" fill="#2c3e50">Tool Calls por Fase da Resolução</text>
+  
+  <!-- Barras horizontais -->
+  <!-- Diagnostico: 8 calls -->
+  <text x="130" y="80" text-anchor="end" font-size="13" font-weight="600" fill="#2c3e50">Diagnóstico</text>
+  <rect x="140" y="62" width="480" height="28" fill="#4A90D9" rx="4" opacity="0.85"/>
+  <text x="630" y="81" font-size="13" font-weight="bold" fill="#4A90D9">8 calls</text>
+  
+  <!-- Correcao: 10 calls -->
+  <text x="130" y="135" text-anchor="end" font-size="13" font-weight="600" fill="#2c3e50">Correção</text>
+  <rect x="140" y="117" width="600" height="28" fill="#E74C3C" rx="4" opacity="0.85"/>
+  <text x="750" y="136" font-size="13" font-weight="bold" fill="#E74C3C">10 calls</text>
+  
+  <!-- Validacao: 5 calls -->
+  <text x="130" y="190" text-anchor="end" font-size="13" font-weight="600" fill="#2c3e50">Validação</text>
+  <rect x="140" y="172" width="300" height="28" fill="#2ECC71" rx="4" opacity="0.85"/>
+  <text x="450" y="191" font-size="13" font-weight="bold" fill="#2ECC71">5 calls</text>
+  
+  <!-- Total -->
+  <line x1="140" y1="220" x2="740" y2="220" stroke="#bdc3c7" stroke-width="1"/>
+  <text x="130" y="245" text-anchor="end" font-size="13" font-weight="700" fill="#2c3e50">TOTAL</text>
+  <rect x="140" y="228" width="660" height="24" fill="#9B59B6" rx="4" opacity="0.7"/>
+  <text x="810" y="246" font-size="13" font-weight="bold" fill="#9B59B6">23 calls</text>
+  
+  <!-- Legenda de esforco -->
+  <text x="400" y="275" text-anchor="middle" font-size="11" fill="#7f8c8d">Correção exigiu 43% de todas as tool calls — a fase mais custosa</text>
+</svg>

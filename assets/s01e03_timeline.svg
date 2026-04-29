@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 160" font-family="'Segoe UI', Arial, sans-serif">
+  <!-- Fundo branco -->
+  <rect width="800" height="160" fill="#ffffff" rx="8"/>
+  
+  <!-- Titulo -->
+  <text x="400" y="25" text-anchor="middle" font-size="15" font-weight="bold" fill="#2c3e50">Timeline da Resolução — 25 minutos</text>
+  
+  <!-- Linha base -->
+  <line x1="60" y1="70" x2="740" y2="70" stroke="#bdc3c7" stroke-width="2"/>
+  
+  <!-- Marcadores de tempo -->
+  <circle cx="60" cy="70" r="6" fill="#95a5a6"/>
+  <circle cx="248" cy="70" r="6" fill="#4A90D9"/>
+  <circle cx="540" cy="70" r="6" fill="#E74C3C"/>
+  <circle cx="700" cy="70" r="6" fill="#2ECC71"/>
+  
+  <!-- Segmentos coloridos -->
+  <line x1="60" y1="70" x2="248" y2="70" stroke="#95a5a6" stroke-width="4"/>
+  <line x1="248" y1="70" x2="540" y2="70" stroke="#E74C3C" stroke-width="4"/>
+  <line x1="540" y1="70" x2="700" y2="70" stroke="#2ECC71" stroke-width="4"/>
+  <line x1="700" y1="70" x2="740" y2="70" stroke="#27AE60" stroke-width="4"/>
+  
+  <!-- Labels -->
+  <text x="60" y="55" text-anchor="middle" font-size="10" fill="#7f8c8d">T+0</text>
+  <text x="60" y="95" text-anchor="middle" font-size="10" font-weight="600" fill="#95a5a6">Descoberta</text>
+  
+  <text x="248" y="55" text-anchor="middle" font-size="10" fill="#4A90D9">T+3min</text>
+  <text x="248" y="95" text-anchor="middle" font-size="10" font-weight="600" fill="#4A90D9">Diagnóstico</text>
+  <text x="248" y="108" text-anchor="middle" font-size="9" fill="#7f8c8d">8 min</text>
+  
+  <text x="540" y="55" text-anchor="middle" font-size="10" fill="#E74C3C">T+11min</text>
+  <text x="540" y="95" text-anchor="middle" font-size="10" font-weight="600" fill="#E74C3C">Correção</text>
+  <text x="540" y="108" text-anchor="middle" font-size="9" fill="#7f8c8d">12 min</text>
+  
+  <text x="700" y="55" text-anchor="middle" font-size="10" fill="#2ECC71">T+23min</text>
+  <text x="700" y="95" text-anchor="middle" font-size="10" font-weight="600" fill="#2ECC71">Validação</text>
+  <text x="700" y="108" text-anchor="middle" font-size="9" fill="#7f8c8d">5 min</text>
+  
+  <!-- Resultado final -->
+  <rect x="720" y="58" width="60" height="24" fill="#27AE60" rx="12" opacity="0.2"/>
+  <text x="750" y="75" text-anchor="middle" font-size="10" font-weight="bold" fill="#27AE60">ONLINE</text>
+  
+  <!-- Rodape -->
+  <text x="400" y="145" text-anchor="middle" font-size="11" fill="#7f8c8d">Do erro ao restore completo: 25 minutos com diagnostico remoto inter-agente</text>
+</svg>

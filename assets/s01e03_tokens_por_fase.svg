@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 320" font-family="'Segoe UI', Arial, sans-serif">
+  <!-- Fundo branco para contraste no GitHub dark mode -->
+  <rect width="800" height="320" fill="#ffffff" rx="8"/>
+  
+  <!-- Titulo -->
+  <text x="400" y="30" text-anchor="middle" font-size="16" font-weight="bold" fill="#2c3e50">Tokens Consumidos por Fase da Resolução</text>
+  
+  <!-- Eixo Y -->
+  <line x1="120" y1="50" x2="120" y2="260" stroke="#bdc3c7" stroke-width="1"/>
+  <text x="115" y="265" text-anchor="end" font-size="10" fill="#7f8c8d">0</text>
+  <text x="115" y="205" text-anchor="end" font-size="10" fill="#7f8c8d">3k</text>
+  <text x="115" y="145" text-anchor="end" font-size="10" fill="#7f8c8d">6k</text>
+  <text x="115" y="85" text-anchor="end" font-size="10" fill="#7f8c8d">9k</text>
+  <text x="115" y="55" text-anchor="end" font-size="10" fill="#7f8c8d">12k</text>
+  
+  <!-- Linhas de grade -->
+  <line x1="120" y1="200" x2="750" y2="200" stroke="#ecf0f1" stroke-width="1" stroke-dasharray="4"/>
+  <line x1="120" y1="140" x2="750" y2="140" stroke="#ecf0f1" stroke-width="1" stroke-dasharray="4"/>
+  <line x1="120" y1="80" x2="750" y2="80" stroke="#ecf0f1" stroke-width="1" stroke-dasharray="4"/>
+  
+  <!-- Legenda -->
+  <rect x="520" y="42" width="14" height="14" fill="#4A90D9" rx="2"/>
+  <text x="540" y="53" font-size="11" fill="#2c3e50">Tokens de Entrada</text>
+  <rect x="650" y="42" width="14" height="14" fill="#E8913D" rx="2"/>
+  <text x="670" y="53" font-size="11" fill="#2c3e50">Tokens de Saída</text>
+  
+  <!-- Fase 1: Diagnostico -->
+  <text x="220" y="275" text-anchor="middle" font-size="12" font-weight="600" fill="#2c3e50">Diagnóstico</text>
+  <text x="220" y="290" text-anchor="middle" font-size="10" fill="#7f8c8d">8 min</text>
+  <!-- Entrada: 12500 (escala: max=12500 -> 200px) -->
+  <rect x="170" y="60" width="40" height="200" fill="#4A90D9" rx="3" opacity="0.9"/>
+  <text x="190" y="55" text-anchor="middle" font-size="10" font-weight="bold" fill="#4A90D9">12.5k</text>
+  <!-- Saida: 4200 (escala: 4200/12500*200 = 67px) -->
+  <rect x="220" y="193" width="40" height="67" fill="#E8913D" rx="3" opacity="0.9"/>
+  <text x="240" y="188" text-anchor="middle" font-size="10" font-weight="bold" fill="#E8913D">4.2k</text>
+  
+  <!-- Fase 2: Correcao -->
+  <text x="400" y="275" text-anchor="middle" font-size="12" font-weight="600" fill="#2c3e50">Correção</text>
+  <text x="400" y="290" text-anchor="middle" font-size="10" fill="#7f8c8d">12 min</text>
+  <!-- Entrada: 8700 (8700/12500*200 = 139px) -->
+  <rect x="350" y="121" width="40" height="139" fill="#4A90D9" rx="3" opacity="0.9"/>
+  <text x="370" y="116" text-anchor="middle" font-size="10" font-weight="bold" fill="#4A90D9">8.7k</text>
+  <!-- Saida: 3100 (3100/12500*200 = 50px) -->
+  <rect x="400" y="210" width="40" height="50" fill="#E8913D" rx="3" opacity="0.9"/>
+  <text x="420" y="205" text-anchor="middle" font-size="10" font-weight="bold" fill="#E8913D">3.1k</text>
+  
+  <!-- Fase 3: Validacao -->
+  <text x="580" y="275" text-anchor="middle" font-size="12" font-weight="600" fill="#2c3e50">Validação</text>
+  <text x="580" y="290" text-anchor="middle" font-size="10" fill="#7f8c8d">5 min</text>
+  <!-- Entrada: 5800 (5800/12500*200 = 93px) -->
+  <rect x="530" y="167" width="40" height="93" fill="#4A90D9" rx="3" opacity="0.9"/>
+  <text x="550" y="162" text-anchor="middle" font-size="10" font-weight="bold" fill="#4A90D9">5.8k</text>
+  <!-- Saida: 2300 (2300/12500*200 = 37px) -->
+  <rect x="580" y="223" width="40" height="37" fill="#E8913D" rx="3" opacity="0.9"/>
+  <text x="600" y="218" text-anchor="middle" font-size="10" font-weight="bold" fill="#E8913D">2.3k</text>
+  
+  <!-- Rodape com totais -->
+  <text x="400" y="310" text-anchor="middle" font-size="11" fill="#7f8c8d">Total: 27k tokens entrada | 9.6k tokens saída | 36.6k tokens totais</text>
+</svg>

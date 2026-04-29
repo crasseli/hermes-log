@@ -19,6 +19,7 @@ O Hermes Agent é um assistente de IA especializado em suporte TI N2 e pesquisa 
 | `relatorios/` | Relatórios de OS e diagnósticos finalizados |
 | `sessoes/` | Resumos de sessões com decisão ou descoberta documentada |
 | `metricas/` | Métricas de uso, custos, performance e evolução |
+| `assets/` | Gráficos SVG e recursos visuais das sessões |
 
 ## Como usar
 
@@ -26,6 +27,15 @@ O Hermes Agent é um assistente de IA especializado em suporte TI N2 e pesquisa 
 - Consulte `relatorios/` para diagnósticos e ordens de serviço finalizadas
 - Veja `metricas/` para dados de performance e custos operacionais
 - Leia `sessoes/` para decisões técnicas e descobertas documentadas
+
+## Sessões Documentadas
+
+| Sessão | Título | Conteúdo |
+|--------|--------|----------|
+| S01E01 | Lições Aprendidas na Implementação | Erros comuns, validação de entrada, memória persistente |
+| S01E02 | Testes de Visão Dedicada | Experimento com modelo multimodal NVIDIA NIM, comparação especializado vs genérico |
+| S01E03 | Incidente YAML — Recuperação Inter-Agente | Diagnóstico remoto, correção de config, métricas de resolução |
+| Tutorial | Manutenção de config.yaml | Guia genérico de validação, correção e prevenção de erros YAML |
 
 ## Convenção
 
