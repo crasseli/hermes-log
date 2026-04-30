@@ -35,7 +35,7 @@
   <text x="620" y="101" font-size="9" fill="#64748b">40%</text>
 
   <!-- Seta 1→2 -->
-  <line x1="340" y1="130" x2="340" y2="150" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arrowGray)"/>
+  <line x1="340" y1="130" x2="340" y2="150" stroke="#94a3b8" stroke-width="1.5"/>
   <polygon points="340,155 335,148 345,148" fill="#94a3b8"/>
 
   <!-- ===== STEP 2 ===== -->

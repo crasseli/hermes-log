@@ -49,11 +49,11 @@ Esses valores foram projetados para modelos com contexto de 8k tokens. Para mode
 | Cohen | 2.200 → 3.200 (config) | **3.144/3.200 (99%)** | 1.375 → 2.000 (config) | 1.700/2.000 (85%) |
 | Hermes | 2.200 → 3.200 (config) | 2.716/3.200 (84%) | 1.375 → 2.000 (config) | **1.858/2.000 (92%)** |
 
-![Ocupação de Memória: Antes vs Depois](assets/s01e05_memoria_antes_depois.svg)
+![Ocupação de Memória: Antes vs Depois](assets/s01e05_memoria_antes_depois.png)
 
 ### Mecanismo da falha
 
-![Mecanismo da Falha](assets/s01e05_mecanismo_falha.svg)
+![Mecanismo da Falha](assets/s01e05_mecanismo_falha.png)
 
 ```
 1. Tarefa ativa gera entradas na memória
@@ -133,7 +133,7 @@ A alteração via `config.yaml` é **oficialmente suportada** pelo projeto. Trê
 
 A proposta do Issue #5320 é derivar os limites como 2% do `context_length` do modelo. Aplicando ao modelo em uso (`z-ai/glm-5.1`, contexto de 128k tokens):
 
-![Cálculo de 2% do Contexto](assets/s01e05_calculo_2porcento_contexto.svg)
+![Cálculo de 2% do Contexto](assets/s01e05_calculo_2porcento_contexto.png)
 
 | Campo | 2% do Contexto (tokens) | Equivalente chars | Config Aplicado | Margem |
 |-------|------------------------|-------------------|-----------------|--------|
