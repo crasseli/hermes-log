@@ -9,7 +9,7 @@
 
 ## Resumo do Incidente
 
-Após um restart do gateway, o agente Cohen perdeu completamente o contexto da tarefa ativa e retornou falando de um assunto não relacionado — comportamento que denominamos "amnésia pós-restart". A investigação revelou saturação nos limites de caracteres da memória persistente: `memory_char_limit` em 3.200 com 99% de ocupação, e `user_char_limit` em 2.000 com 92%. Sem espaço para registrar o contexto da tarefa corrente, novas entradas forçavam a substituição de informações essenciais — que se perderam definitivamente quando o gateway reiniciou a conversa.
+Após um restart do gateway, o agente Cohen perdeu completamente o contexto da tarefa ativa e retornou falando de um assunto não relacionado — comportamento que denominamos "amnésia pós-restart". A investigação revelou saturação nos limites de caracteres da memória persistente: `memory_char_limit` em 3.200 com 99% de ocupação, e `user_char_limit` em 2.000 com 92%. Sem espaço para registrar o contexto corrente, novas entradas forçavam a substituição de informações essenciais — que se perderam quando o gateway reiniciou a conversa.
 
 A correção — limites aumentados para 10.000 / 5.000, alinhados com a proposta do GitHub Issue #5320 (2% do contexto do modelo) — reduziu a ocupação média de 90% para 32%, restabelecendo a capacidade de preservar contexto entre sessões.
 
@@ -191,27 +191,42 @@ A ocupação média caiu de **90% para 32%** — folga de 58 pontos percentuais.
 
 ## Lições para Mantenedores
 
-1. **Defaults de memória são conservadores demais para modelos modernos** — Projetados para janelas de 8k tokens, consomem menos de 1% do contexto em modelos de 128k+. Ajuste proativo é essencial.
+1. **Defaults de memória são conservadores demais para modelos modernos** 
+ Projetados para janelas de 8k tokens, consomem menos de 1% do contexto em modelos de 128k+. Ajuste proativo é essencial.
 
-2. **Saturação de memória é silenciosa e degradante** — Quando `memory add` falha por limite, não há notificação visível ao operador. O agente simplesmente para de registrar fatos novos sem aviso.
+2. **Saturação de memória é silenciosa e degradante** 
+ Quando `memory add` falha por limite, não há notificação visível ao operador. O agente simplesmente para de registrar fatos novos sem aviso.
 
-3. **O bug #11665 cria comportamento inconsistente entre vias de acesso** — Sessões gateway respeitam o config; sessões CLI não. Um mesmo agente pode ter limites diferentes dependendo de como é invocado.
+3. **O bug #11665 cria comportamento inconsistente entre vias de acesso** 
+ Sessões gateway respeitam o config; sessões CLI não. Um mesmo agente pode ter limites diferentes dependendo de como é invocado.
 
-4. **Verifique a ocupação antes de reiniciar o gateway** — Se a memória estiver acima de 80%, um restart pode causar amnésia. Não há espaço para registrar checkpoint de contexto.
+4. **Verifique a ocupação antes de reiniciar o gateway** 
+ Se a memória estiver acima de 80%, um restart pode causar amnésia. Não há espaço para registrar checkpoint de contexto.
 
-5. **Correções de configuração devem ser sincronizadas entre instâncias** — Quando um agente aplica uma mudança, o outro precisa aplicar o mesmo ajuste. Senão uma instância fica vulnerável.
+5. **Correções de configuração devem ser sincronizadas entre instâncias** 
+ Quando um agente aplica uma mudança, o outro precisa aplicar o mesmo ajuste. Senão uma instância fica vulnerável.
 
-6. **2% do contexto é um guia, não uma regra rígida** — Para `memory_char_limit`, 2% + folga (+13,6%) funcionou bem. Para `user_char_limit`, 2% - margem (-9,1%) é adequado, pois o perfil de usuário cresce mais lentamente.
+6. **2% do contexto é um guia, não uma regra rígida** 
+ Para `memory_char_limit`, 2% + folga (+13,6%) funcionou bem. Para `user_char_limit`, 2% − margem (−9,1%) é adequado, pois o perfil de usuário cresce mais lentamente.
 
 ---
 
 ## Recomendações
 
-1. **Monitorar ocupação semanalmente:** Se `memory_char_limit` atingir 80% de 10.000 (8.000 chars), avaliar compactação ou aumento adicional
-2. **Protocolo de checkpoint antes de restart:** Registrar contexto da tarefa ativa no armazenamento persistente antes de reiniciar o gateway
-3. **Acompanhar Issue #11665:** Quando o bug de leitura do config pelo CLI for corrigido, verificar se os limites passam a ser respeitados em sessões de terminal
-4. **Avaliar `user_char_limit` para 6.000:** Se atingir 80% de 5.000 (4.000 chars), considerar aumento
-5. **Auto-escala futura (Issue #5320):** Se implementado, os limites serão calculados automaticamente. Até lá, config manual é o caminho oficial (#16831)
+1. **Monitorar ocupação semanalmente** 
+ Se `memory_char_limit` atingir 80% de 10.000 (8.000 chars), avaliar compactação ou aumento adicional.
+
+2. **Protocolo de checkpoint antes de restart** 
+ Registrar contexto da tarefa ativa no armazenamento persistente antes de reiniciar o gateway.
+
+3. **Acompanhar Issue #11665** 
+ Quando o bug de leitura do config pelo CLI for corrigido, verificar se os limites passam a ser respeitados em sessões de terminal.
+
+4. **Avaliar `user_char_limit` para 6.000** 
+ Se atingir 80% de 5.000 (4.000 chars), considerar aumento.
+
+5. **Auto-escala futura (Issue #5320)** 
+ Se implementado, os limites serão calculados automaticamente. Até lá, config manual é o caminho oficial (#16831).
 
 ---
 
