@@ -9,9 +9,9 @@
 
 ## Resumo do Incidente
 
-Após um restart do gateway, o agente Cohen perdeu completamente o contexto da tarefa ativa e retornou falando de um assunto não relacionado — comportamento que denominamos "amnésia pós-restart". A investigação revelou que a causa raiz era a saturação dos limites de caracteres da memória persistente: `memory_char_limit` em 3.200 com ocupação de 99%, e `user_char_limit` em 2.000 com ocupação de 92%. Sem espaço para registrar o contexto da tarefa corrente, cada nova entrada forçava a substituição de informações essenciais — que foram perdidas definitivamente quando o gateway reiniciou a conversa.
+Após um restart do gateway, o agente Cohen perdeu completamente o contexto da tarefa ativa e retornou falando de um assunto não relacionado — comportamento que denominamos "amnésia pós-restart". A investigação revelou saturação nos limites de caracteres da memória persistente: `memory_char_limit` em 3.200 com 99% de ocupação, e `user_char_limit` em 2.000 com 92%. Sem espaço para registrar o contexto da tarefa corrente, novas entradas forçavam a substituição de informações essenciais — que se perderam definitivamente quando o gateway reiniciou a conversa.
 
-A correção — aumentar os limites para 10.000 / 5.000, alinhada com a proposta do GitHub Issue #5320 (2% do contexto do modelo) — reduziu a ocupação média de 90% para 32%, restabelecendo a capacidade de preservar contexto entre sessões.
+A correção — limites aumentados para 10.000 / 5.000, alinhados com a proposta do GitHub Issue #5320 (2% do contexto do modelo) — reduziu a ocupação média de 90% para 32%, restabelecendo a capacidade de preservar contexto entre sessões.
 
 ---
 
@@ -59,7 +59,7 @@ O problema não é o restart em si, mas a **incapacidade de registrar contexto s
 2. Memória atinge 99% de capacidade (3.144/3.200 chars)
 3. Novas entradas forçam substituição — contexto da tarefa é removido para liberar espaço
 4. Restart do gateway limpa a conversa ativa
-5. Memória persistente é injetada no novo turno, mas **sem o contexto que foi compactado no passo 3**
+5. Memória persistente é injetada no novo turno, mas **sem o contexto compactado no passo 3**
 6. Agente "acorda" sem saber do que estava falando — amnésia
 
 Quando a memória atinge o limite, `MemoryStore.add()` rejeita novas escritas com a mensagem: *"Memory at 2094/2200 chars. Adding this entry would exceed the limit. Replace or remove existing entries first."* (Issue #5320). Isso converte silenciosamente `memory add` em `memory add failed` pelo resto da sessão.
@@ -179,7 +179,7 @@ A ocupação média caiu de **90% para 32%** — folga de 58 pontos percentuais.
 ### 1. Ocupação de Memória — Antes vs Depois
 ![Ocupação Antes vs Depois](https://github.com/crasseli/hermes-log/blob/main/assets/s01e05_ocupacao_antes_depois.svg)
 
-### 2. Limites Default vs Recomendado vs Aplicado
+### 2. Limites: Default vs Recomendado vs Aplicado
 ![Limites Default vs Recomendado](https://github.com/crasseli/hermes-log/blob/main/assets/s01e05_limites_default_vs_recomendado.svg)
 
 ### 3. Timeline do Incidente
@@ -191,23 +191,17 @@ A ocupação média caiu de **90% para 32%** — folga de 58 pontos percentuais.
 
 ## Lições para Mantenedores
 
-1. **Defaults de memória são conservadores demais para modelos modernos**
-Projetados para janelas de 8k tokens, consomem menos de 1% do contexto em modelos de 128k+. Ajuste proativo é essencial — não espere atingir o limite.
+1. **Defaults de memória são conservadores demais para modelos modernos** — Projetados para janelas de 8k tokens, consomem menos de 1% do contexto em modelos de 128k+. Ajuste proativo é essencial.
 
-2. **Saturação de memória é silenciosa e degradante**
-Quando `memory add` falha por limite, não há notificação visível ao operador. O agente simplesmente para de registrar fatos novos sem aviso.
+2. **Saturação de memória é silenciosa e degradante** — Quando `memory add` falha por limite, não há notificação visível ao operador. O agente simplesmente para de registrar fatos novos sem aviso.
 
-3. **O bug #11665 cria comportamento inconsistente entre vias de acesso**
-Sessões gateway respeitam o config; sessões CLI não. Um mesmo agente pode ter limites diferentes dependendo de como é invocado.
+3. **O bug #11665 cria comportamento inconsistente entre vias de acesso** — Sessões gateway respeitam o config; sessões CLI não. Um mesmo agente pode ter limites diferentes dependendo de como é invocado.
 
-4. **Verifique a ocupação antes de reiniciar o gateway**
-Se a memória estiver acima de 80%, um restart pode resultar em amnésia — não há espaço para registrar checkpoint de contexto.
+4. **Verifique a ocupação antes de reiniciar o gateway** — Se a memória estiver acima de 80%, um restart pode causar amnésia. Não há espaço para registrar checkpoint de contexto.
 
-5. **Correções de configuração devem ser sincronizadas entre instâncias**
-Quando um agente aplica uma mudança de config, o outro precisa ser notificado para aplicar o mesmo ajuste — senão uma instância fica vulnerável.
+5. **Correções de configuração devem ser sincronizadas entre instâncias** — Quando um agente aplica uma mudança, o outro precisa aplicar o mesmo ajuste. Senão uma instância fica vulnerável.
 
-6. **2% do contexto é um guia, não uma regra rígida**
-Para `memory_char_limit`, 2% + folga (+13,6%) funcionou bem. Para `user_char_limit`, 2% - margem (-9,1%) é adequado porque o perfil de usuário cresce mais lentamente.
+6. **2% do contexto é um guia, não uma regra rígida** — Para `memory_char_limit`, 2% + folga (+13,6%) funcionou bem. Para `user_char_limit`, 2% - margem (-9,1%) é adequado, pois o perfil de usuário cresce mais lentamente.
 
 ---
 
