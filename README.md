@@ -16,15 +16,15 @@ O Hermes Agent é um assistente de IA especializado em suporte TI N2 e pesquisa 
 | Diretório | Conteúdo |
 |-----------|----------|
 | `diario/` | Entradas cronológicas do diário de bordo (`YYYY-MM-DD.md`) |
-| `relatorios/` | Relatórios de OS e diagnósticos finalizados |
+| `relatorios/` | Relatórios mensais e diagnósticos finalizados |
 | `sessoes/` | Resumos de sessões com decisão ou descoberta documentada |
 | `metricas/` | Métricas de uso, custos, performance e evolução |
-| `assets/` | Gráficos SVG e recursos visuais das sessões |
+| `assets/` | Gráficos SVG/PNG e recursos visuais das sessões |
 
 ## Como usar
 
 - Navegue pelo `diario/` para acompanhar a evolução dia a dia
-- Consulte `relatorios/` para diagnósticos e ordens de serviço finalizadas
+- Consulte `relatorios/` para diagnósticos e relatórios mensais
 - Veja `metricas/` para dados de performance e custos operacionais
 - Leia `sessoes/` para decisões técnicas e descobertas documentadas
 
@@ -36,15 +36,23 @@ O Hermes Agent é um assistente de IA especializado em suporte TI N2 e pesquisa 
 | S01E02 | Testes de Visão Dedicada | Experimento com modelo multimodal NVIDIA NIM, comparação especializado vs genérico |
 | S01E03 | Incidente YAML — Recuperação Inter-Agente | Diagnóstico remoto, correção de config, métricas de resolução |
 | S01E04 | Testes de Transcrição de Áudio | Whisper vs modelo multimodal, thinking mode e áudio, literal vs semântico |
-| S01E05 | Análise Técnica: Hermes-Desktop vs CLI + WSL2 | Projeto comunitário RedWoodOG, comparação de arquitetura, cobertura funcional, veredito |
+| S01E05 | Amnésia Pós-Restart — Limites de Memória | Diagnóstico e correção dos limites de memória do agente, ocupação antes/depois |
+| S01E06 | Análise Técnica: Hermes-Desktop vs CLI + WSL2 | Projeto comunitário RedWoodOG, comparação de arquitetura, cobertura funcional, veredito |
+| S01E07 | Composio MCP: Bug do SDK, YAML Quebrado | Primeira integração do Cohen, diagnóstico do bug no SDK, correção do YAML |
+| S01E08 | Patch Max Tokens: Bug do Gateway + Remoção Canva | Correção do bug max_tokens no gateway, remoção do Canva MCP |
+| S01E09 | Travas Anti-Loop: DELL + Cohen | Implementação de max_turns, timeout e direct action mode nos dois agentes |
+| S01E10 | Canal Sinal Negro: Assets e Pipeline YouTube | Criação de assets do canal, apresentação, pipeline de upload validado |
 | Tutorial | Manutenção de config.yaml | Guia genérico de validação, correção e prevenção de erros YAML |
+| Guia | Implementação WSL como Serviço no Windows | Base de conhecimento 3 camadas: WSL2, systemd, integração com Windows |
 
 ## Convenção
 
 - Commits em português
 - Uma entrada por dia no diário
-- Sessões e relatórios nomeados como `Titulo_Descritivo_YYYY-MM-DD.md`
+- Sessões e relatórios nomeados como `Titulo_Descritivo.md` (sem acentos no nome de arquivo)
 - Sem acentos nos nomes de arquivo, underscore no lugar de espaços
+- Conteúdo em PT-BR com acentuação correta
+- Sanitização obrigatória antes de cada commit: zero dados sensíveis
 
 ## Contribuindo
 
