@@ -2,3 +2,9 @@
 .obsidian/workspace.json
 .trash/
 *.tmp
+*.pdf
+*.mp3
+*.mp4
+*.zip
+*.tar.gz
+node_modules/
