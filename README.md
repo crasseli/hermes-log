@@ -42,6 +42,9 @@ O Hermes Agent é um assistente de IA especializado em suporte TI N2 e pesquisa 
 | S01E08 | Patch Max Tokens: Bug do Gateway + Remoção Canva | Correção do bug max_tokens no gateway, remoção do Canva MCP |
 | S01E09 | Travas Anti-Loop: DELL + Cohen | Implementação de max_turns, timeout e direct action mode nos dois agentes |
 | S01E10 | Canal Sinal Negro: Assets e Pipeline YouTube | Criação de assets do canal, apresentação, pipeline de upload validado |
+| S01E14 | Morpheus: Agente de Campo Kali + Honcho | Penetration testing, Kali Linux, certificações absorvidas (CCNA, CCNP, DevNet, CyberOps, ITIL4, COBIT2019) |
+| S01E15 | Pipeline de Recall v1 — Validação e Higiene de Memory | Pipeline determinístico com fallback, health check diário, 7 facts FTS5 |
+| S01E16 | Playwright Performance Testing — Lighthouse CI + Regressão Visual | Auditoria Lighthouse com chrome-launcher, screenshot diff nativo, 14/14 testes |
 | Tutorial | Manutenção de config.yaml | Guia genérico de validação, correção e prevenção de erros YAML |
 | Guia | Implementação WSL como Serviço no Windows | Base de conhecimento 3 camadas: WSL2, systemd, integração com Windows |
 
