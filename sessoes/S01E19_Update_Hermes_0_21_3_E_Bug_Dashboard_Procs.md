@@ -77,15 +77,15 @@ O script `pre-update-backup.ps1` (Robocopy de config.yaml, .env, auth.json, SOUL
 | Versao final | 0.21.3 @ `3dae1f73` (alinhado disco/memoria) |
 | Gates de atualizacao | 3 updates no dia, todos colados |
 | Dano do traceback | nenhum permanente (restart manual resolveu) |
-| Bugs identificados | `.pyc` stale no limpo dashboard_procs (upstream); pre_update_backup off (local) |
+| Bugs identificados | `.pyc` stale no limpo dashboard_procs (upstream); pre_update_backup off — confirmado como decisao intencional |
 
 ---
 
 ## Proximos Passos
 
 - [ ] Decidir `gateway.multiplex_profiles`: `hermes gateway migrate --multiplex` ou `config set gateway.multiplex_profiles false`
-- [ ] Reativar `updates.pre_update_backup` e confirmar que o script roda no proximo update
-- [ ] Reportar upstream o crash do `_kill_stale_dashboard_processes` com a assinatura `scope_home`
+- [x] `updates.pre_update_backup`: **decidido — manter off de proposito** (backup dos sensiveis fica sob demanda com o script manual `pre-update-backup.ps1`)
+- [ ] Reportar upstream o crash do `_kill_stale_dashboard_processes` (keyword `scope_home`)
 
 ---
 
