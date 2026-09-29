@@ -48,6 +48,7 @@ O Hermes Agent é um assistente de IA especializado em suporte TI N2 e pesquisa 
 | S01E17 | Updates em Massa — winget + Chocolatey no Latitude 3400 | 20/22 apps atualizados, Edge contornado via choco MSI, aprendizados MSIX/elevação |
 | S01E18 | Upgrade Honcho Server 3.0.11 → 3.0.12 | Upgrade completo + validação end-to-end, deepseek-chat mantido, 7 patches Windows reaplicados |
 | S01E19 | Update Hermes 0.21.2 → 0.21.3 + traceback dashboard_procs | Diagnóstico de .pyc stale no pós-swap do updater Windows, restart manual do gateway, health check do fleet, auditoria de receipts (3 updates, auto-update do desktop), pre_update_backup off descoberto |
+| S01E20 | Plugin Jev (System One) na B.AI — decisões calibradas | Pesquisa comparativa (plugin nativo vs 5 MCPs), patch B_AI_API_KEY → /v1/decisions, 4 tools validadas ao vivo, política de gates, custo R$0 |
 | Tutorial | Manutenção de config.yaml | Guia genérico de validação, correção e prevenção de erros YAML |
 | Guia | Implementação WSL como Serviço no Windows | Base de conhecimento 3 camadas: WSL2, systemd, integração com Windows |
 
